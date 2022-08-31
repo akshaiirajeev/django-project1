@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% if messages %}
+{% for i in messages %}
+
+<div class="alert alert-danger">{{i}}</div>
+
+
+{% endfor %}
+{% endif %}
+
+
+<br><br><br><br>
+    {% for i in job %}
+
+</section>
+    {% endfor %}
+<br><br><br><br>
+    {% for i in job %}
+
+
+<div>
+
+    <div class="container" id="f">
+        <br>
+        <center>
+            <span class="tag tag-teal" style="font-size:30px;">
+                {{i.Jobtitle}}
+
+            </span>
+        </center>
+        <br>
+     <div class="container">
+         <div class="row">
+             <div class="col-4"></div>
+             <div>Company Name : {{i.companyname}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Experience&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  : {{i.Experience}}</div><br>
+         </div>
+           <div class="row">
+             <div class="col-4"></div>
+             <div>Work Type &nbsp; &nbsp; &nbsp; &nbsp; : {{i.workplace}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Employment Type : {{i.Employmenttype}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Description : {{i.jobdescription}}</div><br>
+         </div>
+         <div class="row">
+             <div class="col-4"></div>
+                <a class="btn btn-success" href="/view_applicants/{{i.companyname}}/{{i.Jobtitle}}">View applicants</a><center></center>
+         </div>
+
+
+
+     </div>
+
+
+    </div>
+
+
+</div>
+   <br><br>
+{% endfor %}
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<section>
+  <h1>Applicants</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Sl No</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Contact </th>
+          <th>Current Job</th>
+          <th>Company</th>
+          <th>Resume</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+      {% for i,j in x %}
+        <tr>
+          <td class="count"></td>
+          <td>{{i.full_name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.phone}}</td>
+          <td>{{i.current_position}}</td>
+          <td>{{i.current_company}}</td>
+          <td><a href="{% static j %}" download="">Download resume</a></td>
+        </tr>
+         {% endfor %}
+
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Details</title>
+
+
+</head>
+<body>
+
+
+<div>
+    {% for i in x %}
+    <div class="container" id="f">
+        <br>
+        <center>
+            <span class="tag tag-teal" style="font-size:30px;">
+                {{i.Jobtitle}}
+
+            </span>
+        </center>
+        <br><br><br>
+     <div class="container">
+         <div class="row">
+             <div class="col-4"></div>
+             <div>Company Name : {{i.companyname}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Experience&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  : {{i.Experience}}</div><br>
+         </div>
+           <div class="row">
+             <div class="col-4"></div>
+             <div>Work Type &nbsp; &nbsp; &nbsp; &nbsp; : {{i.workplace}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Employment Type : {{i.Employmenttype}}</div><br>
+         </div>
+          <div class="row">
+             <div class="col-4"></div>
+             <div>Description : {{i.jobdescription}}</div><br>
+         </div>
+         <div class="row">
+             <div class="col-4"></div>
+            <center><div><a class="btn btn-danger" href="/apply/{{i.Jobtitle}}/{{i.companyname}}">Apply Now</a></div></center>
+         </div>
+
+
+
+     </div>
+
+{% endfor %}
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
